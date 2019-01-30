@@ -2,4 +2,4 @@
 Gurpreet kaur jhajj,
 Amritpal kaur,
 Gagandeep kaur,
-Prabhjot kaur
+Prabhjot kaur chhina
