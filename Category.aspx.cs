@@ -31,14 +31,9 @@ namespace Applied_project
             if (con.State == System.Data.ConnectionState.Open)
             {
                 string a = "insert into Category(categoryid,categoryname)values('" + t1.Text.ToString() + "','" + t2.Text.ToString() + " ')";
-                string b = "insert into CategoryDetails(categories,numberofproducts)values('" + t1.Text.ToString() + "','" + t2.Text.ToString() + " ')";
-
                 SqlCommand cmd = new SqlCommand(a, con);
-                SqlCommand cmD = new SqlCommand(b, con);
                 cmd.ExecuteNonQuery();
-                cmD.ExecuteNonQuery();
-
-                ac.Text = "Category Added Successfully";
+                Response.Write("Category Added Successfully");
                 con.Close();
 
             }
@@ -50,7 +45,8 @@ namespace Applied_project
             {
                 SqlConnection con = new SqlConnection(cnstring);
                 SqlCommand cmd = new SqlCommand();
-                cmd = new SqlCommand("update Category set categoryid ='2' where categoryname = 'informational' ", con);
+                cmd = new SqlCommand("update Category set categoryid = '" + this.t1.Text + "',categoryname= '" + this.t2.Text +"' where categoryid= " +
+                    "'"+this.t1.Text+"'; ", con);
                 con.Open();
                 cmd.Parameters.AddWithValue("categoryid", t1.Text);
                 cmd.Parameters.AddWithValue("categoryname", t1.Text);
@@ -75,7 +71,7 @@ namespace Applied_project
 
                 SqlConnection con = new SqlConnection(cnstring);
                 SqlCommand cmd = new SqlCommand();
-                cmd = new SqlCommand("delete Category where categoryid = '4' ", con);
+                cmd = new SqlCommand("delete from Category where categoryid = '" + this.t1.Text +"'  ; ",con);
                 con.Open();
                 cmd.Parameters.AddWithValue("categoryid", t1.Text);
                 cmd.Parameters.AddWithValue("categoryname", t1.Text);
@@ -88,7 +84,10 @@ namespace Applied_project
                 Response.Write("please select record to Delete");
             }
 
+
+
+
         }
 
-     }
+    }
  }
