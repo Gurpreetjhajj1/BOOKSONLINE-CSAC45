@@ -44,28 +44,30 @@
         <br />
         <br />
         <br />
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Category]" OnSelecting="SqlDataSource1_Selecting"></asp:SqlDataSource>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Category]">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Category]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Category] WHERE ([categoryid] = @categoryid)">
+            <SelectParameters>
+                <asp:QueryStringParameter Name="categoryid" QueryStringField="cat" Type="Int32" />
+            </SelectParameters>
         </asp:SqlDataSource>
-        <br />
         <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="10">
             <ItemTemplate>
                 <table border="1" class="auto-style1">
                     <tr>
-                        <td class="auto-style3" style="font-family: Algerian">
-                            category id:<asp:Label ID="Label1" runat="server" Text='<%# Eval("categoryid") %>' ForeColor="#000099"></asp:Label>
+                        <td class="auto-style3">
+                            <asp:Label ID="Label1" runat="server" Text='<%# Eval("categoryid") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style4" style="font-family: Algerian">
-                            category name:<asp:Label ID="Label3" runat="server" Text='<%# Eval("categoryname") %>' ForeColor="#000099"></asp:Label>
+                        <td class="auto-style4">
+                            <asp:Label ID="Label3" runat="server" Text='<%# Eval("categoryname") %>'></asp:Label>
                         </td>
                     </tr>
                 </table>
                 <br />
             </ItemTemplate>
         </asp:DataList>
-        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [categories], [numberofproducts] FROM [CategoryDetails]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [CategoryDetails]"></asp:SqlDataSource>
         <asp:DataList ID="DataList2" runat="server" DataSourceID="SqlDataSource3" RepeatColumns="10">
             <ItemTemplate>
                 <table border="1" class="auto-style1">
