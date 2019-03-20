@@ -79,10 +79,10 @@ namespace Applied_project
                 SqlConnection con = new SqlConnection(cnstring);
                 SqlCommand cmd = new SqlCommand();
                 cmd = new SqlCommand("delete from Products where productid= '" + this.t1.Text + "'  ; ", con);
-                cmd = new SqlCommand("delete from ProductDetails where categories= '" + this.t3.Text + "'  ; ", con);
+               
                 con.Open();
                 cmd.Parameters.AddWithValue("productid", t1.Text);
-                cmd.Parameters.AddWithValue("categoryname", t1.Text);
+                cmd.Parameters.AddWithValue("cname", t1.Text);
                 cmd.ExecuteNonQuery();
                 Response.Write("Product Deleted Successfully");
                 con.Close();
