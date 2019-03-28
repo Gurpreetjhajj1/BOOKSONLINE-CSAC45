@@ -27,7 +27,8 @@ namespace Applied_project
                 string a = "insert into Category(categoryid,categoryname)values('" + t1.Text.ToString() + "','" + t2.Text.ToString() + " ')";
                 SqlCommand cmd = new SqlCommand(a,con);
                 cmd.ExecuteNonQuery();
-                Response.Write("Category Added Successfully");
+                msg.Text = " Category Added Successfully";
+                DataList1.DataBind();
                 con.Close();
             }
         }
@@ -41,17 +42,15 @@ namespace Applied_project
                 cmd = new SqlCommand("update Category set categoryid = '" + this.t1.Text + "',categoryname= '" + this.t2.Text +"' where categoryid= " +
                     "'"+this.t1.Text+"'; ", con);
                 con.Open();
-                cmd.Parameters.AddWithValue("categoryid", t1.Text);
-                cmd.Parameters.AddWithValue("categoryname", t1.Text);
                 cmd.ExecuteNonQuery();
-                Response.Write("Category Edited Successfully");
+                msg.Text = "Category Edited Successfully";
+                DataList1.DataBind();
                 con.Close();
             }
 
-        
             else 
             {
-                Response.Write("please select record to Edit");
+                msg.Text = "please select record to Edit";
             }
         }
 
@@ -66,21 +65,21 @@ namespace Applied_project
                 SqlCommand cmd = new SqlCommand();
                 cmd = new SqlCommand("delete from Category where categoryid = '" + this.t1.Text +"'  ; ",con);
                 con.Open();
-                cmd.Parameters.AddWithValue("categoryid", t1.Text);
-                cmd.Parameters.AddWithValue("categoryname", t1.Text);
                 cmd.ExecuteNonQuery();
-                Response.Write("Category Deleted Successfully");
+                msg.Text = "Category Deleted Successfully";
+                DataList1.DataBind();
                 con.Close();
             }
             else
             {
-                Response.Write("please select record to Delete");
+                msg.Text = "please select record to Delete";
             }
-
-
-
 
         }
 
+        protected void DataList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
  }

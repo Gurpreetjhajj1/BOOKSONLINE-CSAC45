@@ -4,8 +4,12 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
 
+     <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.0.0.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+
+    <title>Product</title>
     <style type="text/css">
         
         body{
@@ -15,10 +19,10 @@
         }
         .auto-style1 {
             width: 94%;
-            height: 292px;
+            height: 335px;
         }
         .auto-style3 {
-            width: 266px;
+            width: 306px;
             height: 26px;
         }
         .auto-style4 {
@@ -26,16 +30,13 @@
             width: 1013px;
         }
         .auto-style5 {
-            width: 266px;
+            width: 306px;
         }
         .auto-style10 {
             width: 1013px;
         }
         .auto-style11 {
             height: 142px;
-        }
-        .auto-style12 {
-            width: 100%;
         }
         .auto-style13 {
             height: 23px;
@@ -52,11 +53,20 @@
             height: 26px;
         }
         .auto-style17 {
-            width: 1737px;
+            width: 1752px;
             height: 56px;
         }
         .auto-style18 {
-            margin-bottom: 83px;
+            width: 195px;
+            height: 38px;
+        }
+        .auto-style19 {
+            width: 306px;
+            height: 38px;
+        }
+        .auto-style20 {
+            width: 1013px;
+            height: 38px;
         }
         </style>
 
@@ -65,9 +75,10 @@
     <form id="form1" runat="server">
         <div>
             <div class="auto-style17">
-                <asp:Label ID="Label14" runat="server" Font-Bold="True" Font-Names="Algerian" Font-Size="XX-Large" Text="Products"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Button6" runat="server" Font-Bold="True" Font-Names="Algerian" Font-Size="X-Large" Text="Logout" Width="123px" />
+                <asp:Label ID="Label14" runat="server" Font-Bold="True" Font-Names="Algerian" Font-Size="X-Large" Text="Products" ForeColor="White"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+                &nbsp;&nbsp;
+                <asp:Button ID="Button6"  CssClass="btn btn-light" runat="server" Font-Bold="True" Font-Names="Algerian" Font-Size="X-Large" Text="Logout" Width="123px" PostBackUrl="~/Loginpage.aspx" BorderStyle="Outset" />
                 <br />
                 <br />
                 <br />
@@ -97,12 +108,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style15">
-                        &nbsp;</td>
-                    <td class="auto-style5">
+                    <td class="auto-style18">
+                        </td>
+                    <td class="auto-style19">
                         <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Category Name" Font-Size="X-Large" Font-Italic="True"></asp:Label>
                     </td>
-                    <td class="auto-style10">
+                    <td class="auto-style20">
                         <asp:TextBox ID="t3" runat="server" BorderStyle="Inset"></asp:TextBox>
                     </td>
                 </tr>
@@ -125,15 +136,19 @@
                     </td>
                     <td class="auto-style4">
                         <asp:TextBox ID="t5" runat="server" BorderStyle="Inset"></asp:TextBox>
-                    &nbsp;</td>
+                    &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="t5" ErrorMessage="Please Enter the value1to50" ValidationExpression="^[1-50]\d*(\.\d+)?$"></asp:RegularExpressionValidator>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style14">&nbsp;</td>
-                    <td class="auto-style11" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Button1" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="X-Large" Text="Add " Width="106px" BorderStyle="Inset" OnClick="Button1_Click" Font-Names="Algerian" />
+                    <td class="auto-style11" colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:Button ID="Button1" CssClass="btn btn-light"  runat="server" Font-Bold="True" Font-Italic="True" Font-Size="X-Large" Text="Add " Width="106px" BorderStyle="Outset" OnClick="Button1_Click" Font-Names="Algerian" />
                     &nbsp;&nbsp;&nbsp;&nbsp;
-                        <asp:Button ID="Button4" runat="server" Font-Bold="True" Font-Italic="True" Text="Edit" Width="95px" BorderStyle="Inset" Font-Size="X-Large" OnClick="Button4_Click" Font-Names="Algerian" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button5" runat="server" Font-Bold="True" Font-Italic="True" Text="Delete" BorderStyle="Inset" Font-Size="X-Large" Width="120px" OnClick="Button5_Click1" Font-Names="Algerian" />
+                        <asp:Button ID="Button4"  CssClass="btn btn-light"  runat="server" Font-Bold="True" Font-Italic="True" Text="Edit" Width="95px" BorderStyle="Outset" Font-Size="X-Large" OnClick="Button4_Click" Font-Names="Algerian" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Button ID="Button5"   CssClass="btn btn-light"  runat="server" Font-Bold="True" Font-Italic="True" Text="Delete" BorderStyle="Outset" Font-Size="X-Large" Width="120px" OnClick="Button5_Click1" Font-Names="Algerian" />
+                        &nbsp;
+                        <asp:Label ID="msg" runat="server" Font-Bold="True" Font-Italic="True" Font-Size="Large"></asp:Label>
                         <br />
                         <br />
                         <br />
@@ -142,10 +157,9 @@
                 </tr>
             </table>
         </div>
-        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="10" CssClass="auto-style18">
+        <asp:DataList ID="DataList1" runat="server" DataSourceID="SqlDataSource1" RepeatColumns="10" RepeatDirection="Horizontal">
             <ItemTemplate>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <table class="auto-style12" border="2">
+                &nbsp;<table class="table table table-bordered" border="2">
                     <tr>
                         <td><strong>Product id:</strong><asp:Label ID="Label9" runat="server" Text='<%# Eval("productid") %>'></asp:Label>
                         </td>
@@ -155,7 +169,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><strong>Category Name</strong><asp:Label ID="Label11" runat="server" Text='<%# Eval("categoryname") %>'></asp:Label>
+                        <td><strong>Category Name:</strong><asp:Label ID="Label11" runat="server" Text='<%# Eval("categoryname") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
@@ -163,7 +177,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td><strong>Sales Price:</strong><asp:Label ID="Label13" runat="server" Text='<%# Eval("salesprice") %>'></asp:Label>
+                        <td><strong>Sales Price:</strong>$<asp:Label ID="Label13" runat="server" Text='<%# Eval("salesprice") %>'></asp:Label>
                         </td>
                     </tr>
                 </table>
